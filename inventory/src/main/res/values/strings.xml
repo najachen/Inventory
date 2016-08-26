@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Inventory</string>
+    <string-array name="unit">
+        <item>罐</item>
+        <item>個</item>
+        <item>nl</item>
+        <item>g</item>
+        <item>包</item>
+    </string-array>
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".InventoryHomeActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_home_search"
+        android:text="關鍵字搜尋" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:text="我的物品 "
+                android:id="@+id/b_mine"
+                android:layout_weight=".8"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp"
+                android:onClick="mine" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:text="使用者"
+                android:id="@+id/b_user"
+                android:layout_weight=".8"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="50dp"
+                android:textSize="20dp"
+                android:onClick="user" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:text="地點"
+                android:id="@+id/b_location"
+                android:layout_weight=".8"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp"
+                android:onClick="location"
+                android:nestedScrollingEnabled="false" />
+
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:text="類別 "
+                android:id="@+id/b_category"
+                android:layout_weight=".8"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="50dp"
+                android:textSize="20dp"
+                android:onClick="category" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:text="期限"
+                android:id="@+id/b_expiredDate"
+                android:layout_weight=".8"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp"
+                android:onClick="expiredDate" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:text="庫存"
+                android:id="@+id/b_inventory"
+                android:layout_weight=".8"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="50dp"
+                android:textSize="20dp"
+                android:onClick="inventory" />
+
+        </TableRow>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 新增紀錄"
+            android:id="@+id/b_createNew"
+            android:textSize="20dp"
+            android:onClick="createNew" />
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="    **溫馨提醒"
+        android:id="@+id/t_reminder"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
