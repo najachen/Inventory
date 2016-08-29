@@ -16,28 +16,29 @@ public class InventoryMyDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE \"account\" " +
                 "(\"_id\" INTEGER PRIMARY KEY NOT NULL, " +
-                "\"nickname\" VARCHAR(20), " +
-                "\"createdBy\" VARCHAR(20), " +
-                "\"createdOn\" TEXT  )");
+                "\"nickname\" VARCHAR(20))"
+//                "\"createdBy\" VARCHAR(20), " +
+//                "\"createdOn\" TEXT  )"
+        );
         db.execSQL("CREATE TABLE \"category\" " +
                 "(\"_id\" INTEGER PRIMARY KEY NOT NULL, " +
-                "\"createdBy\" VARCHAR(20), " +
-                "\"createdOn\" TEXT , " +
+//                "\"createdBy\" VARCHAR(20), " +
+//                "\"createdOn\" TEXT , " +
                 "\"category\" VARCHAR(50)  )");
         db.execSQL("CREATE TABLE \"inventory\"" +
                 " (\"_id\" INTEGER PRIMARY KEY NOT NULL, " +
                 "\"item_id\" INTEGER," +
-                " \"qty\" INTEGER, " +
-                "\"createdOn\"TEXT  )");
+                " \"qty\" INTEGER)");
+//                "\"createdOn\"TEXT  )");
         db.execSQL("CREATE TABLE \"item\"" +
                 "(_id INTEGER PRIMARY KEY NOT NULL," +
-                        "createdBy TEXT," +
-                        "createdOn TEXT," +
+//                        "createdBy TEXT," +
+//                        "createdOn TEXT," +
                         "itemName TEXT," +
                         "expiredOn TEXT," +
                         "photo TEXT," +
-                        "modifiedBy TEXT," +
-                        "modifiedOn TEXT," +
+//                        "modifiedBy TEXT," +
+//                        "modifiedOn TEXT," +
                         "remark TEXT," +
                         //"location_id INTEGER NOT NULL," +
                         "location_id INTEGER," +
@@ -47,8 +48,8 @@ public class InventoryMyDBHelper extends SQLiteOpenHelper {
                         "user TEXT)");
         db.execSQL("CREATE TABLE \"location\"" +
                 "(_id INTEGER PRIMARY KEY NOT NULL," +
-                        "createdBy TEXT," +
-                        "createdOn TEXT," +
+//                        "createdBy TEXT," +
+//                        "createdOn TEXT," +
                         "location TEXT," +
                         "Parent TEXT)");
         db.execSQL("CREATE TABLE  \"relationship\"" +
