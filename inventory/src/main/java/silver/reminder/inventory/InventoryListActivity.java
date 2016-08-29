@@ -14,7 +14,7 @@ public class InventoryListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        ListView listView = (ListView)findViewById(R.id.listView);
+        ListView listView = (ListView)findViewById(R.id.list_list);
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,lei);
         listView.setAdapter(adapter);
     }

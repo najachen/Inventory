@@ -25,7 +25,7 @@ public class InventoryCreateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
         findViewById();
-        helper = new InventoryMyDBHelper(this,"expense.db",null,1);
+        helper = new InventoryMyDBHelper(this,"inventory.db",null,1);
     }
     private void findViewById(){
         edItemname =(EditText)findViewById(R.id.ed_itemName);
@@ -45,12 +45,24 @@ public class InventoryCreateActivity extends AppCompatActivity {
         String direction = edDirection.getText().toString();
         String user = edUser.getText().toString();
         String category = edCategory.getText().toString();
-        int qty = Integer.parseInt(edQty.getText().toString());
+        String q  = edQty.getText().toString();
+        q = q==null?"":q;
+
+        int qty = 0;
+        try{
+            qty = Integer.parseInt(q);
+        }catch(NumberFormatException e){
+            e.printStackTrace();
+        }
+
+
+
+
         String expiredOn = edExpiredOn.getText().toString();
         String remark = edRemark.getText().toString();
         ContentValues values = new ContentValues();
         values.put("itemName",itemName);
-        long id = helper.getWritableDatabase().insert("exp",null,values);
+        long id = helper.getWritableDatabase().insert("item",null,values);
         Log.d("ADD", String.valueOf(id));
 
 
