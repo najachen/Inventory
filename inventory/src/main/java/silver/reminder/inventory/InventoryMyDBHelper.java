@@ -14,18 +14,31 @@ public class InventoryMyDBHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-    db.execSQL("CREATE TABLE exp" +
-            "(_id INTEGER PRIMARY KEY NOT NULL,"+
-            "name TEXT,"+
-            "image TEXT,"+
-            "room TEXT,"+
-            "place TEXT,"+
-            "direction TEXT,"+
-            "user TEXT,"+
-            "sort TEXT,"+
-            "amount TEXT,"+
-            "limit TEXT,"+
-            "remark TEXT)");
+
+    db.execSQL("CREATE TABLE item" +
+            ("_id INTEGER PRIMARY KEY NOT NULL,"+
+                    "createdBy TEXT,"+
+                    "createdOn TEXT,"+
+                    "itemName TEXT,"+
+                    "expiredOn TEXT,"+
+                    "photo TEXT,"+
+                    "modifiedBy TEXT,"+
+                    "modifiedOn TEXT,"+
+                    "remark TEXT)"+
+                    "location_id INTEGER PRIMARY KEY NOT NULL,"+
+                    "category_id INTEGER PRIMARY KEY NOT NULL,"+
+                    "direction TEXT,"+
+                    "user TEXT"));
+        db.execSQL("CREATE TABLE location" +
+                ("_id INTEGER PRIMARY KEY NOT NULL,"+
+                        "createdBy TEXT,"+
+                        "createdOn TEXT,"+
+                        "location TEXT,"+
+                        "Parent TEXT"));
+        db.execSQL("CREATE TABLE relationship" +
+                ("_id INTEGER PRIMARY KEY NOT NULL,"+
+                        "account_id INTEGER PRIMARY KEY NOT NULL,"+
+                        "account_id INTEGER PRIMARY KEY NOT NULL,"));
     }
 
     @Override

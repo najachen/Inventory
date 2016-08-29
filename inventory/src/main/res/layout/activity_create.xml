@@ -233,7 +233,7 @@
 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="63dp"
+                    android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
                     android:ems="10"
                     android:id="@+id/ed_remark" />
@@ -248,14 +248,14 @@
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="35dp"
                 android:text="儲存"
                 android:id="@+id/button"
                 android:layout_marginLeft="88dp" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:text="取消"
                 android:id="@+id/button2"
                 android:onClick="cancel"/>
