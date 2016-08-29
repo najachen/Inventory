@@ -14,18 +14,18 @@ public class InventoryMyDBHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-    db.execSQL("CREATE TABLE main.exp" +
-            "_id INTEGER PRIMARY KEY NOT NULL,"+
-            "name VARCHAR"+
-            "image BUTTON"+
-            "room VARCHAR NOT NULL"+
-            "place VARCHAR"+
-            "direction VARCHAR"+
-            "user VARCHAR"+
-            "sort VARCHAR"+
-            "amount INTEGER"+
-            "limit DATATIME NOT NULL"+
-            "remark VARCHAR");
+    db.execSQL("CREATE TABLE exp" +
+            "(_id INTEGER PRIMARY KEY NOT NULL,"+
+            "name TEXT,"+
+            "image TEXT,"+
+            "room TEXT,"+
+            "place TEXT,"+
+            "direction TEXT,"+
+            "user TEXT,"+
+            "sort TEXT,"+
+            "amount TEXT,"+
+            "limit TEXT,"+
+            "remark TEXT)");
     }
 
     @Override

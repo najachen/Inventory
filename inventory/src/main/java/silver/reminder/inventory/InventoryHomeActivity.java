@@ -13,7 +13,7 @@ public class InventoryHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
     public void mine(View view){
-        Intent intent = new Intent(this,InventoryColumnsActivity.class);
+        Intent intent = new Intent(this,InventoryColumn2Activity.class);
         startActivity(intent);
     }
     public void user(View view){
@@ -29,11 +29,11 @@ public class InventoryHomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void expiredDate(View view){
-        Intent intent = new Intent(this,InventoryColumnsActivity.class);
+        Intent intent = new Intent(this,InventoryColumn2Activity.class);
         startActivity(intent);
     }
     public void inventory(View view){
-        Intent intent = new Intent(this,InventoryColumnsActivity.class);
+        Intent intent = new Intent(this,InventoryColumn2Activity.class);
         startActivity(intent);
     }
     public void createNew(View view){

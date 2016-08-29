@@ -66,7 +66,7 @@ public class InventoryLocationActivity extends AppCompatActivity implements Adap
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if ((int) id == R.drawable.func_baby) {
-            startActivity(new Intent(this, InventoryFinanceActivity.class));
+            startActivity(new Intent(this, InventoryColumnsActivity.class));
 
         } else if ((int) id == R.drawable.func_elwoman) {
         } else if ((int) id == R.drawable.func_elman) {
