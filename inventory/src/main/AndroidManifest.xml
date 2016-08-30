@@ -10,17 +10,19 @@
         android:theme="@style/AppTheme">
         <activity android:name=".InventoryMainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InventoryColumn2Activity"/>
-        <activity android:name=".InventoryColumnsActivity"/>
-        <activity android:name=".InventoryCreateActivity"/>
-        <activity android:name=".InventoryHomeActivity"/>
-        <activity android:name=".InventoryItemviewActivity"/>
-        <activity android:name=".InventoryListActivity"/>
-        <activity android:name=".InventoryLocationActivity"/>
+        <activity android:name=".InventoryColumn2Activity" />
+        <activity android:name=".InventoryColumnsActivity" />
+        <activity android:name=".InventoryCreateActivity" />
+        <activity android:name=".InventoryHomeActivity" />
+        <activity android:name=".InventoryItemviewActivity" />
+        <activity android:name=".InventoryListActivity" />
+        <activity android:name=".InventoryUserActivity" />
+        <activity android:name=".InventoryLocationActivity"></activity>
     </application>
 
 </manifest>
