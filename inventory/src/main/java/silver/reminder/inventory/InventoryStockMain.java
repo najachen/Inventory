@@ -26,7 +26,7 @@ public class InventoryStockMain extends AppCompatActivity {
         Cursor c = helper.getReadableDatabase().rawQuery("select * from inventory join item " +
                 "on inventory.item_id = item._id  and qty <> -1", new String[]{});
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
-                R.layout.activity_col2_stock,
+                R.layout.inventory_row_stock,
                 c,
                 new String[]{"itemName", "qty"},
                 new int[]{R.id.t_row_stock_itemName, R.id.t_row_stock_qty},
