@@ -106,7 +106,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="50dp"
                 android:textSize="20dp"
-                android:onClick="inventory" />
+                android:onClick="stock" />
 
         </TableRow>
 

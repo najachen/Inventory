@@ -32,8 +32,8 @@ public class InventoryHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,InventoryColumn2Activity.class);
         startActivity(intent);
     }
-    public void inventory(View view){
-        Intent intent = new Intent(this,InventoryColumn2Activity.class);
+    public void stock(View view){
+        Intent intent = new Intent(this,InventoryStockActivity.class);
         startActivity(intent);
     }
     public void createNew(View view){

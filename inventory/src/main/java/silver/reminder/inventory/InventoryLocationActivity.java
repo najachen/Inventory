@@ -40,7 +40,7 @@ public class InventoryLocationActivity extends AppCompatActivity implements Adap
             public View getView(int position, View convertView, ViewGroup parent) {
                 View row =convertView;
                 if  (row==null){
-                    row = getLayoutInflater().inflate(R.layout.item_row,null);
+                    row = getLayoutInflater().inflate(R.layout.inventory_row_user,null);
                     ImageView image = (ImageView) row.findViewById(R.id.item_image);
                     TextView text = (TextView) row.findViewById(R.id.item_text);
                     image.setImageResource(icons[position]);
@@ -53,7 +53,7 @@ public class InventoryLocationActivity extends AppCompatActivity implements Adap
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_inventory_location);
+            setContentView(R.layout.activity_user);
             GridView gridView = (GridView)findViewById(R.id.gridView);
             IconAdapter gAdapter = new IconAdapter();
             gridView.setAdapter(gAdapter);

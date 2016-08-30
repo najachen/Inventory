@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -42,7 +43,6 @@ public class InventoryCreateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create);
         findViewById();
         photo_id.setVisibility(View.INVISIBLE);
-
         helper = new InventoryMyDBHelper(this,"inventory.db",null,1);
     }
     private void findViewById(){

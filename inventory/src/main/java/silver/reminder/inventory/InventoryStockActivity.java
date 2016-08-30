@@ -3,13 +3,13 @@ package silver.reminder.inventory;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.widget.GridView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-public class InventoryStockMain extends AppCompatActivity {
+public class InventoryStockActivity extends AppCompatActivity {
 
-    private ListView list;
+    private GridView list;
     private TextView l_title;
 
     @Override
@@ -34,7 +34,7 @@ public class InventoryStockMain extends AppCompatActivity {
     }
 
     private void findViews() {
-        list = (ListView) findViewById(R.id.list_list);
+        list = (GridView) findViewById(R.id.grid_list);
         l_title = (TextView) findViewById(R.id.l_title);
     }
 }

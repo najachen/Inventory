@@ -22,7 +22,9 @@
         <activity android:name=".InventoryItemviewActivity" />
         <activity android:name=".InventoryListActivity" />
         <activity android:name=".InventoryUserActivity" />
-        <activity android:name=".InventoryLocationActivity"></activity>
+        <activity android:name=".InventoryLocationActivity"/>
+        <activity android:name=".InventoryStockActivity">
+        </activity>
     </application>
 
 </manifest>

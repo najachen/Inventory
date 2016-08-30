@@ -42,7 +42,7 @@ public class InventoryUserActivity extends AppCompatActivity implements AdapterV
         public View getView(int position, View convertView, ViewGroup parent) {
             View row =convertView;
             if  (row==null){
-                row = getLayoutInflater().inflate(R.layout.item_row,null);
+                row = getLayoutInflater().inflate(R.layout.inventory_row_user,null);
                 ImageView image = (ImageView) row.findViewById(R.id.item_image);
                 TextView text = (TextView) row.findViewById(R.id.item_text);
                 image.setImageResource(icons[position]);
