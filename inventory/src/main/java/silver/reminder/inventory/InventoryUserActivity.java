@@ -66,23 +66,23 @@ public class InventoryUserActivity extends AppCompatActivity implements AdapterV
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if ((int) id == R.drawable.func_baby) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
         } else if ((int) id == R.drawable.func_elwoman) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
         } else if ((int) id == R.drawable.func_elman) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
         } else if ((int) id == R.drawable.func_ma) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
         } else if ((int) id == R.drawable.func_ba) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
         } else if ((int) id == R.drawable.func_elsister) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
         } else if ((int) id == R.drawable.func_ysister) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
         } else if ((int) id == R.drawable.func_brother) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
         } else if ((int) id == R.drawable.func_mine) {
-            startActivity(new Intent(this, InventoryColumnsActivity.class));
+            startActivity(new Intent(this, InventoryUserlistActivity.class));
             finish();
 
         }

@@ -64,17 +64,17 @@ public class InventoryLocationActivity extends AppCompatActivity implements Adap
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             if ((int) id == R.drawable.lo_babyroom ){
-                startActivity(new Intent(this, InventoryColumnsActivity.class));
+                startActivity(new Intent(this, InventoryLocationlistActivity.class));
             } else if ((int) id == R.drawable.lo_bathroom) {
-                startActivity(new Intent(this, InventoryColumnsActivity.class));
+                startActivity(new Intent(this, InventoryLocationlistActivity.class));
             } else if ((int) id == R.drawable.lo_kichen) {
-                startActivity(new Intent(this, InventoryColumnsActivity.class));
+                startActivity(new Intent(this, InventoryLocationlistActivity.class));
             } else if ((int) id == R.drawable.lo_livingroom) {
-                startActivity(new Intent(this, InventoryColumnsActivity.class));
+                startActivity(new Intent(this, InventoryLocationlistActivity.class));
             } else if ((int) id == R.drawable.lo_studyingroom) {
-                startActivity(new Intent(this, InventoryColumnsActivity.class));
+                startActivity(new Intent(this, InventoryLocationlistActivity.class));
             } else if ((int) id == R.drawable.lo_toilet) {
-                startActivity(new Intent(this, InventoryColumnsActivity.class));
+                startActivity(new Intent(this, InventoryLocationlistActivity.class));
                 finish();
             }
         }

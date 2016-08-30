@@ -7,4 +7,7 @@
         <item>g</item>
         <item>包</item>
     </string-array>
+    <string name="title_activity_temp">TempActivity</string>
+    <string name="title_activity_inventory_expired">InventoryExpiredActivity</string>
+    <string name="title_activity_inventory_mine">InventoryMineActivity</string>
 </resources>

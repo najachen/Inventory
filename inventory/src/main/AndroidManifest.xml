@@ -15,16 +15,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InventoryColumn2Activity" />
-        <activity android:name=".InventoryColumnsActivity" />
         <activity android:name=".InventoryCreateActivity" />
         <activity android:name=".InventoryHomeActivity" />
         <activity android:name=".InventoryItemviewActivity" />
-        <activity android:name=".InventoryListActivity" />
         <activity android:name=".InventoryUserActivity" />
-        <activity android:name=".InventoryLocationActivity"/>
-        <activity android:name=".InventoryStockActivity">
-        </activity>
+        <activity android:name=".InventoryLocationActivity" />
+        <activity android:name=".InventoryStockActivity" />
+        <activity
+            android:name=".InventoryCategoryActivity"
+            android:label="@string/title_activity_temp"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InventoryExpiredActivity"
+            android:label="@string/title_activity_inventory_expired"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InventoryMineActivity"
+            android:label="@string/title_activity_inventory_mine"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

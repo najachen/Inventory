@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class InventoryCreateActivity extends AppCompatActivity {
 
@@ -67,6 +69,17 @@ public class InventoryCreateActivity extends AppCompatActivity {
         String user = edUser.getText().toString();
         String category = edCategory.getText().toString();
         String q  = edQty.getText().toString();
+
+        boolean isRoomNotKeyIn = room == null || room.length() == 0;
+        boolean isItemNameNotKeyIn = itemName == null || itemName.length() == 0;
+        if(isItemNameNotKeyIn || isRoomNotKeyIn){
+            new AlertDialog.Builder(this)
+                    .setTitle("錯誤訊息")
+                    .setMessage("儲存失敗：「物品名稱」與「位置」為必填欄位")
+                    .show();
+            return;
+        }
+
         q = q==null?"-1":q;
         int qty = -1;
         try{
@@ -83,20 +96,28 @@ public class InventoryCreateActivity extends AppCompatActivity {
         locaionValues1.put("parent", "*");
         long rowIdRoom = helper.getWritableDatabase().insert("location", null, locaionValues1);
 
+        Log.d("DATA_room", rowIdRoom+"");
+
         ContentValues locationValues2 = new ContentValues();
         locationValues2.put("location",place);
         locationValues2.put("parent", String.valueOf(rowIdRoom));
         long rowIdPlace = helper.getWritableDatabase().insert("location", null, locationValues2);
+
+        Log.d("DATA_place", rowIdPlace+"");
 
         ContentValues locationValues3 = new ContentValues();
         locationValues3.put("location", direction);
         locationValues3.put("parent", String.valueOf(rowIdPlace));
         long rowIdDirection = helper.getWritableDatabase().insert("location", null, locationValues3);
 
+        Log.d("DATA_place", rowIdDirection+"");
+
         //把資料放進 category資料表
         ContentValues categoryValues = new ContentValues();
         categoryValues.put("category",category );
         long rowIdCategory = helper.getWritableDatabase().insert("category", null, categoryValues);
+
+        Log.d("DATA_category", rowIdCategory+"");
 
         //把資料放進 item資料表
         ContentValues itemValues = new ContentValues();
@@ -108,12 +129,36 @@ public class InventoryCreateActivity extends AppCompatActivity {
         itemValues.put("category_id", rowIdCategory );
         itemValues.put("user", user);
         long rowIdItem = helper.getWritableDatabase().insert("item",null, itemValues);
+
+        Log.d("DATA_item", rowIdItem+"");
+
         //把資料放進 inventory資料表
         ContentValues inventoryValues = new ContentValues();
         inventoryValues.put("item_id",rowIdItem);
         inventoryValues.put("qty",qty);
         long rowIdInventory = helper.getWritableDatabase().insert("inventory",null, inventoryValues);
 
+        Log.d("DATA_inventory", rowIdInventory+"");
+
+        Snackbar.make(view, "儲存成功", Snackbar.LENGTH_INDEFINITE)
+                .setAction("新增下一筆紀錄", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        edItemName.setText(" ");
+                        edCategory.setText(" ");
+                        edDirection.setText(" ");
+                        edExpiredOn.setText(" ");
+                        edPlace.setText(" ");
+                        edQty.setText(" ");
+                        edRemark.setText(" ");
+                        edRoom.setText(" ");
+                        edUser.setText(" ");
+                        photo_id.setText(" ");
+                        imageView.setImageBitmap(null);
+                    }
+                })
+
+                .show();
 
     }
     public void cancel(View view){
