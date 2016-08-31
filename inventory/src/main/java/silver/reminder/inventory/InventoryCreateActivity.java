@@ -3,7 +3,6 @@ package silver.reminder.inventory;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.Snackbar;
@@ -11,16 +10,15 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class InventoryCreateActivity extends AppCompatActivity {
 
     private static final int CAMERA = 1;
+    private static final int USER_PIC = 2;
 
     private EditText edItemName;
     private EditText edRoom;
@@ -181,6 +179,11 @@ public class InventoryCreateActivity extends AppCompatActivity {
                     Bitmap image = (Bitmap) data.getExtras().get("data");
                     imageView.setImageBitmap(image);
                     break;
+                case USER_PIC:
+                    int picId = data.getIntExtra("pictureId", 0);
+
+
+                    break;
             }
         }
     }
@@ -188,6 +191,6 @@ public class InventoryCreateActivity extends AppCompatActivity {
     //class SaveItemLocation extends AsyncTask<>
     public void pic(View view){
         Intent intent = new Intent(this,InventoryCreatePicture.class);
-        startActivity(intent);
+        startActivityForResult(intent, USER_PIC);
     }
 }

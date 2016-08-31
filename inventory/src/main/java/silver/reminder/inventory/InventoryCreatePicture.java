@@ -1,14 +1,13 @@
 package silver.reminder.inventory;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class InventoryCreatePicture extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -67,5 +66,8 @@ public class InventoryCreatePicture extends AppCompatActivity implements Adapter
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+        int drawId = (int) parent.getItemIdAtPosition(position);
+
+        setResult(RESULT_OK, getIntent().putExtra("pictureId", drawId));
     }
 }
