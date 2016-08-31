@@ -25,7 +25,7 @@ public class InventoryHomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void category(View view){
-        Intent intent = new Intent(this,InventoryUserActivity.class);
+        Intent intent = new Intent(this,InventoryCategoryActivity.class);
         startActivity(intent);
     }
     public void expiredDate(View view){

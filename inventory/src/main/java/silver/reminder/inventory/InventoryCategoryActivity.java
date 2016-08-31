@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.Spinner;
 
 public class InventoryCategoryActivity extends AppCompatActivity {
     public static final int LEI_LOGIN = 1;
@@ -30,6 +31,15 @@ public class InventoryCategoryActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+//        Spinner create =(Spinner)findViewById(R.id.create_spinner);
+
+//        InventoryMyDBHelper dbHelper = new InventoryMyDBHelper(this);
+
+      //equence> cAdapter = ArrayAdapter.createFromResource(
+//                this,R.layout.create_spinner,android.R.layout.simple_spinner_item.
+   //     );
+//        create.setAdapter(cAdapter);
     }
 
 }

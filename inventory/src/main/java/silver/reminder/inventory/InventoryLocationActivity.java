@@ -54,7 +54,7 @@ public class InventoryLocationActivity extends AppCompatActivity implements Adap
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_user);
-            GridView gridView = (GridView)findViewById(R.id.gridView);
+            GridView gridView = (GridView)findViewById(R.id.grid);
             IconAdapter gAdapter = new IconAdapter();
             gridView.setAdapter(gAdapter);
             gridView.setOnItemClickListener(this);

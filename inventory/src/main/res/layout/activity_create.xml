@@ -167,25 +167,37 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="使用者"
-                    android:id="@+id/textView15" />
+                    android:id="@+id/textView15"
+                    android:textSize="15dp" />
 
                 <EditText
-                    android:layout_width="103dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/ed_user" />
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="图"
+                    android:id="@+id/b_pic"
+                    android:onClick="pic" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="分類"
-                    android:id="@+id/textView16"
-                    android:layout_marginLeft="10dp" />
+                    android:id="@+id/textView16" />
 
                 <EditText
-                    android:layout_width="141dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/ed_category" />
+
+                <Spinner
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/create_spinner" />
             </LinearLayout>
         </LinearLayout>
 

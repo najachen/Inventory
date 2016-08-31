@@ -47,6 +47,9 @@ public class InventoryCreateActivity extends AppCompatActivity {
         photo_id.setVisibility(View.INVISIBLE);
         helper = new InventoryMyDBHelper(this,"inventory.db",null,1);
     }
+
+
+
     private void findViewById(){
         edItemName =(EditText)findViewById(R.id.ed_itemName);
         edRoom =(EditText)findViewById(R.id.ed_room);
@@ -183,4 +186,8 @@ public class InventoryCreateActivity extends AppCompatActivity {
     }
 
     //class SaveItemLocation extends AsyncTask<>
+    public void pic(View view){
+        Intent intent = new Intent(this,InventoryCreatePicture.class);
+        startActivity(intent);
+    }
 }
