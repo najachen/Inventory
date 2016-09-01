@@ -9,34 +9,30 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-public class InventoryCreatePicture extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class InventoryCreateUSPicture extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     boolean logon = false;
     public static final int FUNC_LOGIN = 1;
-//    String[] func = {"寶寶", "阿媽", "阿公", "媽媽", "爸爸", "姐姐", "妹妹", "外甥","我"};
     int []icons = {R.drawable.func_baby, R.drawable.func_elwoman,R.drawable.func_elman,
             R.drawable.func_ma,R.drawable.func_ba,R.drawable.func_elsister,R.drawable.func_ysister,
-            R.drawable.func_brother,R.drawable.func_mine
-
+            R.drawable.func_brother,R.drawable.func_mine,R.drawable.baby1,R.drawable.baby2,R.drawable.baby4,
+            R.drawable.babygirl2,R.drawable.func_brother
     };
 
     class IconAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
-//            return func.length;
             return icons.length;
         }
 
         @Override
         public Object getItem(int position) {
-//            return func[position];
             return 0;
         }
 
         @Override
         public long getItemId(int position) {
-
             return icons[position];
         }
 
@@ -46,9 +42,7 @@ public class InventoryCreatePicture extends AppCompatActivity implements Adapter
             if  (row==null){
                 row = getLayoutInflater().inflate(R.layout.inventory_row_user,null);
                 ImageView image = (ImageView) row.findViewById(R.id.item_image);
-//                TextView text = (TextView) row.findViewById(R.id.item_text);
                 image.setImageResource(icons[position]);
-//                text.setText(func[position]);
             }
             return row;
         }
@@ -56,8 +50,8 @@ public class InventoryCreatePicture extends AppCompatActivity implements Adapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inventory_create_picture);
-        GridView grid = (GridView)findViewById(R.id.grid_pic);
+        setContentView(R.layout.activity_inventory_create_uspicture);
+        GridView grid = (GridView)findViewById(R.id.gridu_pic);
         IconAdapter gAdapter = new IconAdapter();
         grid.setAdapter(gAdapter);
         grid.setOnItemClickListener(this);
@@ -65,9 +59,8 @@ public class InventoryCreatePicture extends AppCompatActivity implements Adapter
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
         int drawId = (int) parent.getItemIdAtPosition(position);
-
         setResult(RESULT_OK, getIntent().putExtra("pictureId", drawId));
+        finish();
     }
 }

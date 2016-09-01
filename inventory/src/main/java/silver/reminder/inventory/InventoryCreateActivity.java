@@ -19,6 +19,7 @@ public class InventoryCreateActivity extends AppCompatActivity {
 
     private static final int CAMERA = 1;
     private static final int USER_PIC = 2;
+    private static final int LOCATION_PIC = 3;
 
     private EditText edItemName;
     private EditText edRoom;
@@ -181,16 +182,21 @@ public class InventoryCreateActivity extends AppCompatActivity {
                     break;
                 case USER_PIC:
                     int picId = data.getIntExtra("pictureId", 0);
-
-
+                    break;
+                case LOCATION_PIC:
+                    int lpicId = data.getIntExtra("pictureId", 0);
                     break;
             }
         }
     }
 
     //class SaveItemLocation extends AsyncTask<>
-    public void pic(View view){
-        Intent intent = new Intent(this,InventoryCreatePicture.class);
+    public void uspic(View view){
+        Intent intent = new Intent(this,InventoryCreateUSPicture.class);
         startActivityForResult(intent, USER_PIC);
+    }
+    public void lopic(View view){
+        Intent intent = new Intent(this,InventoryCreateLOPicture.class);
+        startActivityForResult(intent, LOCATION_PIC);
     }
 }

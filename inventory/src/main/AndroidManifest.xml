@@ -33,7 +33,8 @@
             android:name=".InventoryMineActivity"
             android:label="@string/title_activity_inventory_mine"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".InventoryCreatePicture"></activity>
+        <activity android:name=".InventoryCreateUSPicture" />
+        <activity android:name=".InventoryCreateLOPicture"></activity>
     </application>
 
 </manifest>
