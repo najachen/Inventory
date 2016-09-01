@@ -15,7 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ed_home_search"
-        android:text="關鍵字搜尋" />
+        android:text="關鍵字搜尋"
+        android:onClick="ed_home_search" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -126,7 +127,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="    **溫馨提醒"
         android:id="@+id/t_reminder"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="t_reminder" />
 
 
 </LinearLayout>

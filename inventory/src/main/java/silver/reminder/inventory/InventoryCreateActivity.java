@@ -44,7 +44,7 @@ public class InventoryCreateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create);
         findViewById();
         photo_id.setVisibility(View.INVISIBLE);
-        helper = new InventoryMyDBHelper(this,"inventory.db",null,1);
+        helper = InventoryMyDBHelper.getInstance(this);
     }
 
 

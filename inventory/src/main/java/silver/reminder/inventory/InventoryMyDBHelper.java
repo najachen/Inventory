@@ -8,9 +8,21 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by Zumrat on 2016/8/25.
  */
 public class InventoryMyDBHelper extends SQLiteOpenHelper {
-    public InventoryMyDBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+
+    private static InventoryMyDBHelper dbHelper;
+
+    private InventoryMyDBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
+
+    public static InventoryMyDBHelper getInstance(Context context){
+        if(dbHelper == null){
+            dbHelper = new InventoryMyDBHelper(context,"inventory.db",null,1);
+        }
+        return dbHelper;
+    }
+
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
