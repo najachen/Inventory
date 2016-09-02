@@ -46,7 +46,10 @@ public class InventoryExpiredActivity extends AppCompatActivity {
 
     private void selectData() {
         InventoryMyDBHelper helper = InventoryMyDBHelper.getInstance(this);
-        final Cursor c = helper.getReadableDatabase().query("item", null, "expiredOn IS NOT NULL", null, null, null, null);
+        final Cursor c = helper.getReadableDatabase().rawQuery(
+                "select * from item WHERE (expiredOn != ' ' " +
+                        "and expiredOn != '') ORDER BY expiredOn ASC",
+                new String[]{});
 
 
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
