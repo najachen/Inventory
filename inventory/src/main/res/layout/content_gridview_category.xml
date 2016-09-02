@@ -12,7 +12,8 @@
     tools:context=".InventoryCategoryActivity"
     tools:showIn="@layout/activity_gridview_category"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    style="@style/AppStyle2">
 
     <TextView
         android:layout_width="match_parent"
