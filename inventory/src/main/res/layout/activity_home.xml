@@ -143,7 +143,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_shape_index_1"
-                android:onClick="expiredDate"
+                android:onClick="expired"
                 android:text="期限"
                 android:textColor="#445566"
                 android:textSize="20dp" />
